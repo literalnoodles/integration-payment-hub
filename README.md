@@ -14,6 +14,8 @@ Clone the file `.env.example` and rename it as `.env`
 
 Remember to update database information according to your MySQL setup.
 
+- Create a database name `integration_payment_hub`
+
 - Running migration
 ```console
 php artisan migrate
