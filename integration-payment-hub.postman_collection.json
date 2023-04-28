@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "31ede083-f0e3-44b3-b2d9-05238d6e9450",
+		"name": "integration-payment-hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "shopify",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "x_checkout_id",
+							"value": "132423409546723",
+							"type": "default"
+						},
+						{
+							"key": "x_shop_id",
+							"value": "3000",
+							"type": "default"
+						},
+						{
+							"key": "x_amount",
+							"value": "9.99",
+							"type": "default"
+						},
+						{
+							"key": "x_currency",
+							"value": "USD",
+							"type": "default"
+						},
+						{
+							"key": "x_customer_email",
+							"value": "customer1@shopify.com",
+							"type": "default"
+						},
+						{
+							"key": "x_url_callback",
+							"value": "https://api.shopify.com/notify/rf/132423409546723",
+							"type": "default"
+						},
+						{
+							"key": "x_signature",
+							"value": "7d9b5864f2d2081004fbd65dea09d442173f10f8804beb0da9239fbd34cf3336",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/payment-checkout/shopify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"payment-checkout",
+						"shopify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cafe24",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cafe24_checkout_id",
+							"value": "234akzvlk34074166",
+							"type": "default"
+						},
+						{
+							"key": "cafe24_store_id",
+							"value": "2000",
+							"type": "default"
+						},
+						{
+							"key": "cafe24_amount",
+							"value": "9.99",
+							"type": "default"
+						},
+						{
+							"key": "cafe24_currency_code",
+							"value": "USD",
+							"type": "default"
+						},
+						{
+							"key": "cafe24_customer_email",
+							"value": "customer1@cf24.com",
+							"type": "default"
+						},
+						{
+							"key": "cafe24_payment_callback_url",
+							"value": "https://api.cafe24.com/payment-callback/v1/oid/234akzvlk34074166",
+							"type": "default"
+						},
+						{
+							"key": "cafe24_hash_data",
+							"value": "FpVCCNGalAoIOHpMZqdYFL+vKXG9+Gj4Fpw6Yi7nJrc=",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/payment-checkout/cafe24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"payment-checkout",
+						"cafe24"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
